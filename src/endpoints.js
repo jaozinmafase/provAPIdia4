@@ -57,16 +57,16 @@ server.post('/dia4/fatorial', (req, resp) => {
 
 server.post('/dia4/sequencia', (req, resp)=> {
     try {
-        const limite = req.body.limite;
-        const numeros = sequencia(limite);
+        const limite = Number(req.body.limite);
+        const numero = (sequencia(limite));
 
         resp.send({
-            pares: numeros
+            pares: numero
         })
 
     }
     catch (err) {
-        resp.status(404).send ({
+        resp.send ({
             error:err.message
         })
     }

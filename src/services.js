@@ -62,10 +62,13 @@ export function fatorial (num){
 }
 
 export function sequencia (limite) {
-    for (let numero = 0; numero <= limite; limite++){
-    if(limite % 2 == 0){
 
+for(let numero = 0; numero >= limite; numero++){
+
+    if(numero % 2 == 0){
+        return numero;
     }
-    }
-    return numero
-}
+    
+} 
+
+} 
